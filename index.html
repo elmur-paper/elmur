@@ -6,26 +6,26 @@
   
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <meta name="title" content="ELMUR">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
   <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
   <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="author" content="Egor Cherepanov, Alexey Kovalev, Aleksandr Panov">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
+  <meta property="og:site_name" content="Cognitive AI Lab">
   <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
+  <meta property="og:title" content="ELMUR">
   <!-- TODO: Same as description above -->
   <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <meta property="og:url" content="https://elmur-paper.github.io/">
   <!-- TODO: Create a 1200x630px preview image and update path -->
   <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
@@ -74,11 +74,11 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  <title>ELMUR</title>
   
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/icon.png">
+  <link rel="apple-touch-icon" href="static/images/icon.png">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -221,7 +221,7 @@
   <div class="more-works-container">
     <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
       <i class="fas fa-flask"></i>
-      More Works
+      More about memory in RL/Robotics
       <i class="fas fa-chevron-down dropdown-arrow"></i>
     </button>
     <div class="more-works-dropdown" id="moreWorksDropdown">
@@ -233,31 +233,31 @@
       </div>
       <div class="works-list">
         <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
+        <a href="https://arxiv.org/pdf/2502.10550" class="work-item" target="_blank">
           <div class="work-info">
             <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
+            <h5>Memory, Benchmark & Robots: a Benchmark for Solving Complex Tasks with Reinforcement Learning</h5>
             <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
+            <p>MIKASA-Robo: a benchmark with memory-intensive tabletop robotic manipulation tasks.</p>
             <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
+            <!-- <span class="work-venue">Conference/Journal 2024</span> -->
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
         <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
+        <a href="https://arxiv.org/pdf/2306.09459" class="work-item" target="_blank">
           <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
+            <h5>Recurrent Action Transformer with Memory</h5>
+            <p>RATE: a memory-augmented transformer for long-horizon Offline RL.</p>
+            <!-- <span class="work-venue">Conference/Journal 2023</span> -->
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
+        <a href="https://arxiv.org/pdf/2412.06531?" class="work-item" target="_blank">
           <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
+            <h5>Unraveling the Complexity of Memory in RL Agents: an Approach for Classification and Evaluation</h5>
+            <p>A theoretical framework for separating different types of memory in RL.</p>
+            <!-- <span class="work-venue">Conference/Journal 2023</span> -->
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
@@ -495,7 +495,12 @@
 
     <!-- T-Maze -->
     <h3 class="title is-4">T-Maze: Long-Horizon Retention</h3>
-    <img src="static/images/tmaze-limits-elmur.png" alt="T-Maze long-horizon results" style="width:100%;">
+    <div class="image-container" style="position: relative; overflow: hidden; border-radius: 12px;">
+      <img src="static/images/tmaze-limits-elmur.png" alt="T-Maze long-horizon results" style="width:100%; transition: all 0.3s ease;" class="interactive-image">
+      <div class="image-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: 600;">
+        🏆 100% Success Rate up to 1M steps!
+      </div>
+    </div>
     <p class="has-text-centered" style="margin-bottom: 2rem;">
       <em><strong>Success rate on the T-Maze task as a function of inference corridor length. </strong>
         ELMUR achieves a <strong>100% success rate</strong> up to corridor lengths of <strong>one million steps</strong>. In this figure, the context length is L=10 with S=3 segments; thus <strong>ELMUR carries information across horizons 100,000 times longer than its context window</strong>.</em>
@@ -506,7 +511,12 @@
       </p>
     </div>
 
-    <img src="static/images/heatmap.png" alt="Heatmap of T-Maze results" style="width:100%;">
+    <div class="image-container" style="position: relative; overflow: hidden; border-radius: 12px;">
+      <img src="static/images/heatmap.png" alt="Heatmap of T-Maze results" style="width:100%; transition: all 0.3s ease;" class="interactive-image">
+      <div class="image-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: 600;">
+        📊 Perfect generalization across lengths!
+      </div>
+    </div>
     <p class="has-text-centered" style="margin-bottom: 2rem;">
       <em><strong>Generalization of ELMUR across T-Maze lengths.</strong>
         Each cell shows success rate (mean ± standard error) for training vs. validation lengths.
@@ -522,7 +532,12 @@
     <h3 class="title is-4 mt-6">POPGym-48: Broad Generalization</h3>
 
     <div style="text-align: center;">
-      <img src="static/images/popgym-table.png" alt="POPGym table" style="width:70%;">
+      <div class="image-container" style="position: relative; overflow: hidden; border-radius: 12px; display: inline-block;">
+      <img src="static/images/popgym-table.png" alt="POPGym table" style="width:70%; transition: all 0.3s ease;" class="interactive-image">
+      <div class="image-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(245, 101, 101, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: 600;">
+        🏆 #1 on 24/48 POPGym tasks!
+      </div>
+    </div>
       <p class="has-text-centered" style="margin-bottom: 2rem;">
         <em><strong>Aggregated returns over all 48 POPGym tasks.</strong> ELMUR ranks <strong>first on 24/48 tasks</strong>, with the largest gains on memory puzzles.</em>
       </p>
@@ -535,14 +550,24 @@
       </p>
     </div>
 
-    <img src="static/images/elmur-vs-dt.png" alt="POPGym results" style="width:100%;">
+    <div class="image-container" style="position: relative; overflow: hidden; border-radius: 12px;">
+      <img src="static/images/elmur-vs-dt.png" alt="POPGym results" style="width:100%; transition: all 0.3s ease;" class="interactive-image">
+      <div class="image-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.1) 100%); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: 600;">
+        📈 Consistent improvements over DT!
+      </div>
+    </div>
     <p class="has-text-centered" style="margin-bottom: 2rem;">
       <em><strong>ELMUR compared to DT on all 48 POPGym tasks.</strong> Each model was trained with three independent runs, validated over 100 episodes each. Bars show the mean performance with 95% confidence intervals computed over these three means. ELMUR achieves consistent improvements over DT, with the largest gains on memory-intensive puzzles.</em>
     </p>
 
     <!-- MIKASA-Robo -->
     <h3 class="title is-4 mt-6">MIKASA-Robo: Visual Manipulation</h3>
-    <img src="static/images/mikasa-table.png" alt="MIKASA-Robo results" style="width:100%;">
+    <div class="image-container" style="position: relative; overflow: hidden; border-radius: 12px;">
+      <img src="static/images/mikasa-table.png" alt="MIKASA-Robo results" style="width:100%; transition: all 0.3s ease;" class="interactive-image">
+      <div class="image-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(126, 34, 206, 0.1) 100%); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: 600;">
+        🤖 Nearly 2x better than baselines!
+      </div>
+    </div>
     <p class="has-text-centered" style="margin-bottom: 2rem;">
       <em><strong>Success rates on MIKASA-Robo tasks.</strong> ELMUR nearly doubles the performance of strong baselines.</em>
     </p>
@@ -728,7 +753,57 @@
           showAdminStats();
         }
       });
+
+      // Initialize scroll animations and interactive elements
+      initScrollAnimations();
+      initInteractiveElements();
     });
+
+    // Add smooth scroll animations for sections
+    function initScrollAnimations() {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections and make them initially invisible
+      document.querySelectorAll('.section, .hero').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(section);
+      });
+    }
+
+    // Initialize interactive elements
+    function initInteractiveElements() {
+      // Add hover effects to interactive images
+      const interactiveImages = document.querySelectorAll('.interactive-image');
+      interactiveImages.forEach(img => {
+        img.addEventListener('mouseenter', function() {
+          const overlay = this.parentElement.querySelector('.image-overlay');
+          if (overlay) {
+            overlay.style.opacity = '1';
+          }
+        });
+
+        img.addEventListener('mouseleave', function() {
+          const overlay = this.parentElement.querySelector('.image-overlay');
+          if (overlay) {
+            overlay.style.opacity = '0';
+          }
+        });
+      });
+    }
 
     // Admin function to view statistics (only accessible via Ctrl+Shift+L)
     function showAdminStats() {
