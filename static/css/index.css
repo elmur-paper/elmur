@@ -1288,9 +1288,7 @@ img[alt*="results"]:hover,
     font-size: 0.9rem;
   }
 
-  #likeStats {
-    font-size: 0.75rem;
-  }
+  /* Like stats hidden from UI */
 }
 
 @media screen and (max-width: 480px) {
@@ -1308,10 +1306,7 @@ img[alt*="results"]:hover,
     display: none; /* Hide text on very small screens */
   }
 
-  #likeStats {
-    font-size: 0.7rem;
-    margin-top: 0.1rem;
-  }
+  /* Like stats hidden from UI */
 }
 
 

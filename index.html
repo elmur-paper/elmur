@@ -333,9 +333,7 @@
     <i id="likeIcon" class="far fa-heart" style="color: #e53e3e; font-size: 1.5rem;"></i>
     <div>
       <div id="likeText" style="font-weight: 500; white-space: nowrap;">Like this work!</div>
-      <div id="likeStats" style="font-size: 0.8rem; color: #666; display: none; margin-top: 0.2rem;">
-        <span id="likeCount">0</span> likes
-      </div>
+      <!-- Like stats removed from UI -->
     </div>
   </button>
 </div>
@@ -695,8 +693,6 @@
       const likeBtn = document.getElementById('likeBtn');
       const likeIcon = document.getElementById('likeIcon');
       const likeText = document.getElementById('likeText');
-      const likeStats = document.getElementById('likeStats');
-      const likeCount = document.getElementById('likeCount');
 
       if (hasUserLiked()) {
         // User already liked - don't allow another like
@@ -717,11 +713,7 @@
       likeText.textContent = 'Thank you for your like! ❤️';
       likeText.style.color = '#28a745';
 
-      // Show stats
-      likeStats.style.display = 'block';
-      likeCount.textContent = totalLikes;
-
-      // Save to localStorage
+      // Save to localStorage (stats only visible to admin)
       localStorage.setItem('elmur_total_likes', totalLikes.toString());
       localStorage.setItem('elmur_liked_users', JSON.stringify(likedUsers));
 
@@ -736,16 +728,12 @@
     document.addEventListener('DOMContentLoaded', function() {
       const likeIcon = document.getElementById('likeIcon');
       const likeText = document.getElementById('likeText');
-      const likeStats = document.getElementById('likeStats');
-      const likeCount = document.getElementById('likeCount');
 
       if (hasUserLiked()) {
         likeIcon.className = 'fas fa-heart';
         likeText.textContent = 'You already liked this work!';
         likeText.style.color = '#e53e3e';
       }
-
-      likeCount.textContent = totalLikes;
 
       // Show admin stats if special key combination is pressed (Ctrl+Shift+L)
       document.addEventListener('keydown', function(e) {
