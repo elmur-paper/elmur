@@ -241,30 +241,33 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://avanturist322.github.io/" target="_blank">Egor Cherepanov</a><sup>1,2</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://scholar.google.com/citations?user=N1zWb74AAAAJ" target="_blank">Alexey K. Kovalev</a><sup>1,2</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://grafft.github.io/" target="_blank">Aleksandr I. Panov</a><sup>1,2</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
+                    <sup>1</sup>Cognitive AI Lab, Moscow, Russia, <sup>2</sup>IAI MIPT, Moscow, Russia<br>
                     <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
+                    <div class="award-banner" style="color: #28a745; font-weight: 600; margin: 10px 0;">
+                      🏆 <a href="https://rememberl-corl25.github.io/" target="_blank" style="color: #28a745; text-decoration: underline;">RemembeRL Workshop</a> @ CoRL 2025, Best Poster Award
+                    </div>
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://openreview.net/pdf?id=H2dvLYqlaa" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -313,24 +316,20 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
+<!-- Teaser image-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
+      <!-- Main model image -->
+      <img src="static/images/main-model.png" alt="ELMUR Main Model Architecture" style="width: 100%; height: auto; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-xl); margin: 1rem 0;" />
+      <!-- TODO: Replace with your image description -->
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        <strong>ELMUR overview.</strong> Each transformer layer is augmented with an external memory track that runs in parallel with the token track. Tokens attend to memory through a <code>mem2tok</code> block, while memory embeddings are updated from tokens through a <code>tok2mem</code> block. LRU block selectively rewrites memory via replacement or convex blending, ensuring bounded yet persistent storage. This design enables token-memory interaction and long-horizon recall beyond the attention window.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
