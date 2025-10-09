@@ -10,7 +10,7 @@
   <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="ELMUR is a transformer model with layer-local external memory and LRU-based memory updates for long-horizon reasoning in POMDPs">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <meta name="keywords" content="ELMUR, external memory, long-horizon RL, transformer, reinforcement learning, machine learning, AI, robotics, POMDPs">
   <!-- TODO: List all authors -->
   <meta name="author" content="Egor Cherepanov, Alexey Kovalev, Aleksandr Panov">
   <meta name="robots" content="index, follow">
@@ -30,12 +30,12 @@
   <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="og:image:alt" content="ELMUR - Research Preview">
+  <meta property="article:published_time" content="2025-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Egor Cherepanov">
+  <meta property="article:section" content="Machine Learning">
+  <meta property="article:tag" content="Reinforcement Learning">
+  <meta property="article:tag" content="Long-Horizon RL">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -44,20 +44,21 @@
   <!-- TODO: Replace with first author's Twitter handle -->
   <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
   <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
+  <meta name="twitter:title" content="ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL">
   <!-- TODO: Same as description above -->
   <meta name="twitter:description" content="ELMUR is a transformer model with layer-local external memory and LRU-based memory updates for long-horizon reasoning in POMDPs">
   <!-- TODO: Same as social preview image above -->
   <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:image:alt" content="ELMUR - Research Preview">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  <meta name="citation_title" content="ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL">
+  <meta name="citation_author" content="Cherepanov, Egor">
+  <meta name="citation_author" content="Kovalev, Alexey K.">
+  <meta name="citation_author" content="Panov, Aleksandr I.">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_journal_title" content="arXiv preprint arXiv:2510.07151">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2510.07151.pdf">
   
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
@@ -114,50 +115,63 @@
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
+    "headline": "ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL",
     "description": "ELMUR is a transformer model with layer-local external memory and LRU-based memory updates for long-horizon reasoning in POMDPs",
     "author": [
       {
         "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
+        "name": "Egor Cherepanov",
         "affiliation": {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+          "name": "Cognitive AI Lab"
         }
       },
       {
         "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
+        "name": "Alexey K. Kovalev",
         "affiliation": {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+          "name": "Cognitive AI Lab"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Aleksandr I. Panov",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Cognitive AI Lab"
         }
       }
     ],
-    "datePublished": "2024-01-01",
+    "datePublished": "2025",
     "publisher": {
       "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
+      "name": "arXiv"
     },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "url": "https://arxiv.org/abs/2510.07151",
+    "sameAs": "https://arxiv.org/abs/2510.07151",
     "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "keywords": ["machine learning", "reinforcement learning", "long-horizon RL", "transformer", "external memory"],
+    "abstract": "Real-world robotic agents must act under partial observability and long horizons, where key cues may appear long before they affect decision making. However, most modern approaches rely solely on instantaneous information, without incorporating insights from the past. Standard recurrent or transformer models struggle with retaining and leveraging long-term dependencies: context windows truncate history, while naive memory extensions fail under scale and sparsity. We propose ELMUR (External Layer Memory with Update/Rewrite), a transformer architecture with structured external memory. Each layer maintains memory embeddings, interacts with them via bidirectional cross-attention, and updates them through an Least Recently Used (LRU) memory module using replacement or convex blending. ELMUR extends effective horizons up to 100,000 times beyond the attention window and achieves a 100% success rate on a synthetic T-Maze task with corridors up to one million steps. In POPGym, it outperforms baselines on more than half of the tasks. On MIKASA-Robo sparse-reward manipulation tasks with visual observations, it nearly doubles the performance of strong baselines. These results demonstrate that structured, layer-local external memory offers a simple and scalable approach to decision making under partial observability.",
+    "citation": "@misc{cherepanov2025elmurexternallayermemory, title={ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL}, author={Egor Cherepanov and Alexey K. Kovalev and Aleksandr I. Panov}, year={2025}, eprint={2510.07151}, archivePrefix={arXiv}, primaryClass={cs.LG}, url={https://arxiv.org/abs/2510.07151}}",
     "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "license": "https://arxiv.org/licenses/assumed",
     "mainEntity": {
       "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+      "@id": "https://elmur-paper.github.io/"
     },
     "about": [
       {
         "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
+        "name": "Machine Learning"
       },
       {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
+        "@type": "Thing",
+        "name": "Reinforcement Learning"
+      },
+      {
+        "@type": "Thing",
+        "name": "Long-Horizon Reasoning"
       }
     ]
   }
@@ -298,13 +312,21 @@
                     <div class="publication-links">
                   <!-- TODO: Update with your arXiv paper ID -->
                   <span class="link-block">
-                    <a href="https://openreview.net/forum?id=H2dvLYqlaa" target="_blank"
+                    <a href="https://arxiv.org/abs/2510.07151" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
                     <span>arXiv</span>
                   </a>
+
+                  <a href="https://arxiv.org/pdf/2510.07151.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>PDF</span>
+                </a>
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
@@ -622,12 +644,14 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@inproceedings{cherepanov2025elmur,
-  title={{ELMUR}: External Layer Memory with Update/Rewrite for Long-Horizon {RL}},
-  author={Egor Cherepanov and Alexey Kovalev and Aleksandr Panov},
-  booktitle={CoRL 2025 Workshop RemembeRL},
-  year={2025},
-  url={https://openreview.net/forum?id=H2dvLYqlaa}
+      <pre id="bibtex-code"><code>@misc{cherepanov2025elmurexternallayermemory,
+      title={ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL},
+      author={Egor Cherepanov and Alexey K. Kovalev and Aleksandr I. Panov},
+      year={2025},
+      eprint={2510.07151},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2510.07151},
 }</code></pre>
     </div>
 </section>
